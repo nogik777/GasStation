@@ -2,12 +2,12 @@ fun main() {
 
     val azs = PetrolStation(55, 10000)
 
-    val clientCar = Car(55)
-    val clientCar2 = Car(45)
+    val trafficGenerator = TrafficGenerator()
+    val carArray = trafficGenerator.getTraffic()
 
-    azs.refuel(clientCar)
-    azs.refuel(clientCar2)
-    azs.refuel(clientCar2)
+    for (car in carArray){
+        azs.refuel(car)
+    }
 
     azs.showStatistics()
 
