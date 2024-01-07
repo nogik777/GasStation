@@ -1,6 +1,6 @@
 class PetrolStation(private var pricePerLiter: Int, private var amountOfFuel: Int) {
     private var endAmount = amountOfFuel
-    fun refuel(client: Array<Car>) {
+    fun refuel(client: List<Car>) {
         for (car in client) {
             if (endAmount >= car.volume){
                 endAmount -= car.volume

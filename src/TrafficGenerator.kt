@@ -1,10 +1,10 @@
 class TrafficGenerator {
-    fun getTraffic(): Array<Car>{
-        var traffic: Array<Car> = arrayOf()
+    fun getTraffic(): List<Car>{
+        val traffic: MutableList<Car> = mutableListOf()
         val rndNumbOfCars = (1..100).random()
         for (car in 0..rndNumbOfCars){
             val rndVolume = (1..100).random()
-            traffic+=Car(rndVolume)
+            traffic.add(car, Car(rndVolume))
         }
         return traffic
     }
