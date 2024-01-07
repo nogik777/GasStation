@@ -1,2 +1,1 @@
-class Car(var volume: Int) {
-}
+data class Car(var volume: Int)
